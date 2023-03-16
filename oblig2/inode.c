@@ -36,7 +36,7 @@ struct inode *create_file(struct inode *parent, char *name, char readonly, int s
     node->filesize = size_in_bytes;
     node->is_readonly = readonly;
 
-    node->num_entries = 0; // Denne må endres
+    node->num_entries = 64; // Denne må endres
 
     size_t *entries = malloc(node->num_entries * sizeof(struct inode));
     if (entries == NULL)
